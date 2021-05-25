@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+       githubPush()
+    }
     environment {
         PROJECT_ID = 'horizontal-box-309202'
         CLUSTER_NAME = 'hello-dotnet-cluster'
